@@ -1,0 +1,6 @@
+{
+  "name": "RetainIQ — Customer Churn Prediction & ML Analytics",
+  "description": "Enterprise machine learning workbench for customer churn prediction, cohort risk analytics, batch CSV scoring, and model explainability.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

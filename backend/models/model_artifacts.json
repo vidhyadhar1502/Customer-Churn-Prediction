@@ -1,0 +1,6847 @@
+{
+  "active_model": "logistic_regression",
+  "random_seed": 42,
+  "dataset_stats": {
+    "total_rows": 1200,
+    "churn_positive": 488,
+    "churn_negative": 712,
+    "churn_rate": 0.4067,
+    "imputed_total_charges": 45
+  },
+  "train_size": 961,
+  "test_size": 239,
+  "preprocessor": {
+    "numeric_means": {
+      "tenure": 27.496358,
+      "MonthlyCharges": 64.845765,
+      "TotalCharges": 1810.573736,
+      "charge_to_tenure_ratio": 6.967708,
+      "active_addon_count": 1.935484
+    },
+    "numeric_stds": {
+      "tenure": 20.644562,
+      "MonthlyCharges": 25.998344,
+      "TotalCharges": 1634.876254,
+      "charge_to_tenure_ratio": 12.633207,
+      "active_addon_count": 1.439736
+    },
+    "feature_names": [
+      "tenure",
+      "MonthlyCharges",
+      "TotalCharges",
+      "SeniorCitizen",
+      "charge_to_tenure_ratio",
+      "active_addon_count",
+      "gender_Female",
+      "gender_Male",
+      "Partner_Yes",
+      "Partner_No",
+      "Dependents_Yes",
+      "Dependents_No",
+      "PhoneService_Yes",
+      "PhoneService_No",
+      "MultipleLines_No",
+      "MultipleLines_Yes",
+      "MultipleLines_No phone service",
+      "InternetService_DSL",
+      "InternetService_Fiber optic",
+      "InternetService_No",
+      "OnlineSecurity_No",
+      "OnlineSecurity_Yes",
+      "OnlineSecurity_No internet service",
+      "OnlineBackup_No",
+      "OnlineBackup_Yes",
+      "OnlineBackup_No internet service",
+      "DeviceProtection_No",
+      "DeviceProtection_Yes",
+      "DeviceProtection_No internet service",
+      "TechSupport_No",
+      "TechSupport_Yes",
+      "TechSupport_No internet service",
+      "StreamingTV_No",
+      "StreamingTV_Yes",
+      "StreamingTV_No internet service",
+      "StreamingMovies_No",
+      "StreamingMovies_Yes",
+      "StreamingMovies_No internet service",
+      "Contract_Month-to-month",
+      "Contract_One year",
+      "Contract_Two year",
+      "PaperlessBilling_Yes",
+      "PaperlessBilling_No",
+      "PaymentMethod_Electronic check",
+      "PaymentMethod_Mailed check",
+      "PaymentMethod_Bank transfer (automatic)",
+      "PaymentMethod_Credit card (automatic)"
+    ],
+    "categorical_schema": {
+      "gender": [
+        "Female",
+        "Male"
+      ],
+      "Partner": [
+        "Yes",
+        "No"
+      ],
+      "Dependents": [
+        "Yes",
+        "No"
+      ],
+      "PhoneService": [
+        "Yes",
+        "No"
+      ],
+      "MultipleLines": [
+        "No",
+        "Yes",
+        "No phone service"
+      ],
+      "InternetService": [
+        "DSL",
+        "Fiber optic",
+        "No"
+      ],
+      "OnlineSecurity": [
+        "No",
+        "Yes",
+        "No internet service"
+      ],
+      "OnlineBackup": [
+        "No",
+        "Yes",
+        "No internet service"
+      ],
+      "DeviceProtection": [
+        "No",
+        "Yes",
+        "No internet service"
+      ],
+      "TechSupport": [
+        "No",
+        "Yes",
+        "No internet service"
+      ],
+      "StreamingTV": [
+        "No",
+        "Yes",
+        "No internet service"
+      ],
+      "StreamingMovies": [
+        "No",
+        "Yes",
+        "No internet service"
+      ],
+      "Contract": [
+        "Month-to-month",
+        "One year",
+        "Two year"
+      ],
+      "PaperlessBilling": [
+        "Yes",
+        "No"
+      ],
+      "PaymentMethod": [
+        "Electronic check",
+        "Mailed check",
+        "Bank transfer (automatic)",
+        "Credit card (automatic)"
+      ]
+    },
+    "is_fitted": true,
+    "cleaning_stats": {
+      "total_rows": 1200,
+      "churn_positive": 488,
+      "churn_negative": 712,
+      "churn_rate": 0.4067,
+      "imputed_total_charges": 45
+    }
+  },
+  "models": {
+    "logistic_regression": {
+      "name": "Logistic Regression (L2 Regularized)",
+      "type": "logistic_regression",
+      "weights": [
+        -0.541565,
+        0.330813,
+        -0.164322,
+        0.085711,
+        0.368461,
+        -0.146497,
+        0.031733,
+        -0.08466,
+        -0.198142,
+        0.145215,
+        -0.050667,
+        -0.002259,
+        -0.058573,
+        0.005646,
+        -0.022596,
+        -0.035977,
+        0.005646,
+        -0.27138,
+        0.303774,
+        -0.085321,
+        0.236956,
+        -0.204562,
+        -0.085321,
+        0.029724,
+        0.00267,
+        -0.085321,
+        0.030932,
+        0.001462,
+        -0.085321,
+        0.201738,
+        -0.169344,
+        -0.085321,
+        -0.005354,
+        0.037748,
+        -0.085321,
+        0.013724,
+        0.01867,
+        -0.085321,
+        0.689178,
+        -0.365644,
+        -0.376461,
+        0.017977,
+        -0.070904,
+        0.201428,
+        -0.079867,
+        -0.151527,
+        -0.022961
+      ],
+      "bias": -0.435197,
+      "hyperparameters": {
+        "C": 83.33,
+        "penalty": "l2",
+        "solver": "newton-irls-gd",
+        "class_weight": "balanced_1.22"
+      },
+      "metrics": {
+        "accuracy": 0.8536,
+        "precision": 0.837,
+        "recall": 0.7938,
+        "specificity": 0.8944,
+        "f1_score": 0.8148,
+        "roc_auc": 0.9265,
+        "threshold": 0.5,
+        "test_samples": 239,
+        "confusion_matrix": {
+          "tp": 77,
+          "tn": 127,
+          "fp": 15,
+          "fn": 20
+        },
+        "roc_curve": [
+          {
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.1031
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.2062
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.3093
+          },
+          {
+            "fpr": 0.007,
+            "tpr": 0.4021
+          },
+          {
+            "fpr": 0.0141,
+            "tpr": 0.4948
+          },
+          {
+            "fpr": 0.0211,
+            "tpr": 0.5876
+          },
+          {
+            "fpr": 0.0493,
+            "tpr": 0.6495
+          },
+          {
+            "fpr": 0.0704,
+            "tpr": 0.7216
+          },
+          {
+            "fpr": 0.0986,
+            "tpr": 0.7835
+          },
+          {
+            "fpr": 0.1338,
+            "tpr": 0.8351
+          },
+          {
+            "fpr": 0.1831,
+            "tpr": 0.866
+          },
+          {
+            "fpr": 0.2324,
+            "tpr": 0.8969
+          },
+          {
+            "fpr": 0.2958,
+            "tpr": 0.9072
+          },
+          {
+            "fpr": 0.338,
+            "tpr": 0.9485
+          },
+          {
+            "fpr": 0.4014,
+            "tpr": 0.9588
+          },
+          {
+            "fpr": 0.4577,
+            "tpr": 0.9794
+          },
+          {
+            "fpr": 0.5282,
+            "tpr": 0.9794
+          },
+          {
+            "fpr": 0.5915,
+            "tpr": 0.9897
+          },
+          {
+            "fpr": 0.662,
+            "tpr": 0.9897
+          },
+          {
+            "fpr": 0.7324,
+            "tpr": 0.9897
+          },
+          {
+            "fpr": 0.7958,
+            "tpr": 1.0
+          },
+          {
+            "fpr": 0.8662,
+            "tpr": 1.0
+          },
+          {
+            "fpr": 0.9366,
+            "tpr": 1.0
+          },
+          {
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ]
+      },
+      "feature_importance": [
+        {
+          "feature_key": "Contract_Month-to-month",
+          "feature_name": "Contract: Month-to-month",
+          "parent_feature": "Contract",
+          "importance": 0.108,
+          "coefficient": 0.6892,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "tenure",
+          "feature_name": "Customer Tenure (Months)",
+          "parent_feature": "tenure",
+          "importance": 0.0849,
+          "coefficient": -0.5416,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "Contract_Two year",
+          "feature_name": "Contract: Two year",
+          "parent_feature": "Contract",
+          "importance": 0.059,
+          "coefficient": -0.3765,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "charge_to_tenure_ratio",
+          "feature_name": "Monthly Spend-to-Tenure Ratio",
+          "parent_feature": "charge_to_tenure_ratio",
+          "importance": 0.0578,
+          "coefficient": 0.3685,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "Contract_One year",
+          "feature_name": "Contract: One year",
+          "parent_feature": "Contract",
+          "importance": 0.0573,
+          "coefficient": -0.3656,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "MonthlyCharges",
+          "feature_name": "Monthly Charges ($)",
+          "parent_feature": "MonthlyCharges",
+          "importance": 0.0519,
+          "coefficient": 0.3308,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "InternetService_Fiber optic",
+          "feature_name": "Internet Service: Fiber optic",
+          "parent_feature": "InternetService",
+          "importance": 0.0476,
+          "coefficient": 0.3038,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "InternetService_DSL",
+          "feature_name": "Internet Service: DSL",
+          "parent_feature": "InternetService",
+          "importance": 0.0425,
+          "coefficient": -0.2714,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "OnlineSecurity_No",
+          "feature_name": "Online Security: Disabled",
+          "parent_feature": "OnlineSecurity",
+          "importance": 0.0371,
+          "coefficient": 0.237,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "OnlineSecurity_Yes",
+          "feature_name": "Online Security: Enabled",
+          "parent_feature": "OnlineSecurity",
+          "importance": 0.0321,
+          "coefficient": -0.2046,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "TechSupport_No",
+          "feature_name": "Tech Support: Disabled",
+          "parent_feature": "TechSupport",
+          "importance": 0.0316,
+          "coefficient": 0.2017,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "PaymentMethod_Electronic check",
+          "feature_name": "Payment Method: Electronic check",
+          "parent_feature": "PaymentMethod",
+          "importance": 0.0316,
+          "coefficient": 0.2014,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "Partner_Yes",
+          "feature_name": "Partner: Has Partner",
+          "parent_feature": "Partner",
+          "importance": 0.0311,
+          "coefficient": -0.1981,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "TechSupport_Yes",
+          "feature_name": "Tech Support: Enabled",
+          "parent_feature": "TechSupport",
+          "importance": 0.0265,
+          "coefficient": -0.1693,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "TotalCharges",
+          "feature_name": "Total Cumulative Charges ($)",
+          "parent_feature": "TotalCharges",
+          "importance": 0.0258,
+          "coefficient": -0.1643,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "PaymentMethod_Bank transfer (automatic)",
+          "feature_name": "Payment Method: Bank transfer (auto)",
+          "parent_feature": "PaymentMethod",
+          "importance": 0.0238,
+          "coefficient": -0.1515,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "active_addon_count",
+          "feature_name": "Active Protection & Support Add-ons",
+          "parent_feature": "active_addon_count",
+          "importance": 0.023,
+          "coefficient": -0.1465,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "Partner_No",
+          "feature_name": "Partner: Single",
+          "parent_feature": "Partner",
+          "importance": 0.0228,
+          "coefficient": 0.1452,
+          "direction": "increases_churn"
+        }
+      ]
+    },
+    "random_forest": {
+      "name": "Random Forest Classifier (28 Trees)",
+      "type": "random_forest",
+      "trees": [
+        {
+          "leaf": false,
+          "feat": 20,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 29,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 17,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 26,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.229437
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.459459
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 26,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.2
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.046512
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 5,
+              "thresh": 1.434,
+              "left": {
+                "leaf": false,
+                "feat": 17,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.451613
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.244444
+                }
+              },
+              "right": {
+                "leaf": true,
+                "val": 1.0
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 17,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 29,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 13,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.5
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.6875
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 26,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.610169
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.784483
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 29,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 5,
+                "thresh": 0.7394,
+                "left": {
+                  "leaf": true,
+                  "val": 0.297619
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.818182
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 26,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.38
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.57377
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 4,
+          "thresh": -0.2236,
+          "left": {
+            "leaf": false,
+            "feat": 4,
+            "thresh": -0.4253,
+            "left": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.4767,
+              "left": {
+                "leaf": false,
+                "feat": 7,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.048387
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.0
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 30,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.212389
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.076923
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.315,
+              "left": {
+                "leaf": false,
+                "feat": 16,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.248848
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.642857
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 30,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.638298
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.181818
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 8,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 30,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": 0.3422,
+                "left": {
+                  "leaf": true,
+                  "val": 0.830986
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.961538
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 23,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.454545
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.840909
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": 0.1683,
+              "left": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.19,
+                "left": {
+                  "leaf": true,
+                  "val": 0.111111
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.607595
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 7,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.844444
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.617647
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 4,
+          "thresh": -0.2642,
+          "left": {
+            "leaf": false,
+            "feat": 4,
+            "thresh": -0.3998,
+            "left": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.4834,
+              "left": {
+                "leaf": false,
+                "feat": 39,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.074074
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.0
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 5,
+                "thresh": -1.3443,
+                "left": {
+                  "leaf": true,
+                  "val": 0.338028
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.148649
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 29,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.2912,
+                "left": {
+                  "leaf": true,
+                  "val": 0.182796
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.75
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.3174,
+                "left": {
+                  "leaf": true,
+                  "val": 0.414634
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.708333
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 4,
+            "thresh": -0.089,
+            "left": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.1365,
+              "left": {
+                "leaf": false,
+                "feat": 5,
+                "thresh": 0.0448,
+                "left": {
+                  "leaf": true,
+                  "val": 0.833333
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.285714
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.0996,
+                "left": {
+                  "leaf": true,
+                  "val": 0.9
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.4
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 8,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 45,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.920354
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.692308
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 39,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.740385
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.1
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 18,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 1,
+            "thresh": -1.5072,
+            "left": {
+              "leaf": false,
+              "feat": 42,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": -1.6826,
+                "left": {
+                  "leaf": true,
+                  "val": 0.458333
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.172414
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": -1.5761,
+                "left": {
+                  "leaf": true,
+                  "val": 0.175824
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.03125
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": -0.2118,
+              "left": {
+                "leaf": false,
+                "feat": 9,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.30303
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.566265
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": 0.3929,
+                "left": {
+                  "leaf": true,
+                  "val": 0.25
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.5
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 9,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": 1.4072,
+              "left": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": 0.3144,
+                "left": {
+                  "leaf": true,
+                  "val": 0.75
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.444444
+                }
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.0
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 42,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": 0.7202,
+                "left": {
+                  "leaf": true,
+                  "val": 0.423729
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.641304
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": 0.951,
+                "left": {
+                  "leaf": true,
+                  "val": 0.886364
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.481481
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 20,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 27,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 5,
+              "thresh": 0.7394,
+              "left": {
+                "leaf": false,
+                "feat": 6,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.317647
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.210526
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 8,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.0
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.181818
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 13,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 5,
+                "thresh": 1.434,
+                "left": {
+                  "leaf": true,
+                  "val": 0.347222
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.1875
+                }
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.5
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 5,
+            "thresh": 0.0448,
+            "left": {
+              "leaf": false,
+              "feat": 27,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 5,
+                "thresh": -1.3443,
+                "left": {
+                  "leaf": true,
+                  "val": 0.652174
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.494949
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 6,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.714286
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.941176
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 27,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 8,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.6375
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.479592
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 8,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.435644
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.307692
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 18,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 34,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 24,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 16,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.37788
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.631579
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 30,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.122807
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.355556
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 16,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 6,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.27
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.232323
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 6,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.142857
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.428571
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 30,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 26,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 36,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.571429
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.518519
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 36,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.697368
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.788732
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 24,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 26,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.225806
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.46875
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 26,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.727273
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.395349
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 39,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 43,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 32,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 15,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.455172
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.283186
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 14,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.587629
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.408602
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 28,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 6,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.827957
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.66087
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 6,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.111111
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.333333
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 28,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 32,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 6,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.421053
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.142857
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 6,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.066667
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.210526
+                }
+              }
+            },
+            "right": {
+              "leaf": true,
+              "val": 0.0
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 4,
+          "thresh": -0.2387,
+          "left": {
+            "leaf": false,
+            "feat": 4,
+            "thresh": -0.4222,
+            "left": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.4939,
+              "left": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.5138,
+                "left": {
+                  "leaf": true,
+                  "val": 0.083333
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.0
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 25,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.092784
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.354167
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 18,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.3749,
+                "left": {
+                  "leaf": true,
+                  "val": 0.413043
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.155556
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.3435,
+                "left": {
+                  "leaf": true,
+                  "val": 0.326923
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.637681
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 5,
+            "thresh": 0.7394,
+            "left": {
+              "leaf": false,
+              "feat": 18,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 16,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.568966
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 1.0
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.1083,
+                "left": {
+                  "leaf": true,
+                  "val": 0.666667
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.932773
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": 0.048,
+              "left": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.1303,
+                "left": {
+                  "leaf": true,
+                  "val": 0.0
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.2
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 18,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.285714
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.764706
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 8,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 31,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 30,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 45,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.641256
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.468085
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 45,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.481818
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.258065
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 45,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 12,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.2
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.328125
+                }
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.105263
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 12,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 44,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 30,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.684211
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.4
+                }
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.307692
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 31,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 45,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.367925
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.226891
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 45,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.152778
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.352941
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 20,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 32,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 22,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.053333
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.0
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 6,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.02381
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.232558
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 8,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 36,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.186441
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.275
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 41,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.1875
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.130952
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 22,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 6,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 32,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.606742
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.727273
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 20,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.695652
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.838983
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 41,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 8,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.418605
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.297297
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 8,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.785714
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.444444
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 29,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 5,
+            "thresh": 0.0448,
+            "left": {
+              "leaf": false,
+              "feat": 13,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 17,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.202073
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.090909
+                }
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.071429
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 17,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 26,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.322581
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.444444
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 26,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.362069
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.22549
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 17,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 26,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 5,
+                "thresh": 0.0448,
+                "left": {
+                  "leaf": true,
+                  "val": 0.615385
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.468085
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 13,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.719298
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.333333
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 33,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 5,
+                "thresh": -1.3443,
+                "left": {
+                  "leaf": true,
+                  "val": 0.5
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.186813
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 13,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.37037
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.636364
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 39,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 18,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 25,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 24,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.52
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.316327
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 16,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.270833
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.466667
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 3,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 16,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.641921
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.516129
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 16,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.675
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 1.0
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 18,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 25,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 32,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.16129
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.048387
+                }
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.0
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 16,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 32,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.473684
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.333333
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 24,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.0
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.4
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 25,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 45,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 39,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.126437
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.230769
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 42,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.036145
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.185185
+                }
+              }
+            },
+            "right": {
+              "leaf": true,
+              "val": 0.0
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 25,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 42,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 46,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.686275
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.616438
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 45,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.911392
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.538462
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 46,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 45,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.215686
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.375
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 42,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.8
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.526316
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 4,
+            "thresh": -0.4552,
+            "left": {
+              "leaf": true,
+              "val": 0.0
+            },
+            "right": {
+              "leaf": false,
+              "feat": 35,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.414,
+                "left": {
+                  "leaf": true,
+                  "val": 0.0
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.120879
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.2027,
+                "left": {
+                  "leaf": true,
+                  "val": 0.212121
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.5
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 31,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.1982,
+              "left": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.44,
+                "left": {
+                  "leaf": true,
+                  "val": 0.294118
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.676923
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": 1.421,
+                "left": {
+                  "leaf": true,
+                  "val": 0.824885
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.918033
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.4236,
+              "left": {
+                "leaf": false,
+                "feat": 42,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.25
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.085714
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 42,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.565217
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.333333
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 0,
+          "thresh": -0.024,
+          "left": {
+            "leaf": false,
+            "feat": 40,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 20,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 0,
+                "thresh": -0.8959,
+                "left": {
+                  "leaf": true,
+                  "val": 0.646617
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.34
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 0,
+                "thresh": -1.1866,
+                "left": {
+                  "leaf": true,
+                  "val": 0.93617
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.685106
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 20,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.0
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.111111
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 20,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": 2.1073,
+              "left": {
+                "leaf": false,
+                "feat": 22,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.106195
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.025
+                }
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.428571
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 40,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 0,
+                "thresh": 1.526,
+                "left": {
+                  "leaf": true,
+                  "val": 0.398148
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.064516
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 11,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.035714
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.096154
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 2,
+          "thresh": 0.0976,
+          "left": {
+            "leaf": false,
+            "feat": 19,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 5,
+              "thresh": 0.7394,
+              "left": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": -0.7495,
+                "left": {
+                  "leaf": true,
+                  "val": 0.785311
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.586207
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 7,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.5
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.21875
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 2,
+              "thresh": -0.9063,
+              "left": {
+                "leaf": false,
+                "feat": 7,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.607143
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.314286
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": -0.7991,
+                "left": {
+                  "leaf": true,
+                  "val": 0.1875
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.033333
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 5,
+            "thresh": 0.0448,
+            "left": {
+              "leaf": false,
+              "feat": 10,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": 1.5163,
+                "left": {
+                  "leaf": true,
+                  "val": 0.595745
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.0
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 35,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.333333
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.058824
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 23,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 35,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.467742
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.15
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": 0.5352,
+                "left": {
+                  "leaf": true,
+                  "val": 0.25641
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.070312
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 18,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 9,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.0
+              },
+              "right": {
+                "leaf": false,
+                "feat": 19,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.095238
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.0
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 39,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 43,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.115942
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.388889
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 9,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.285714
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.488889
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 19,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 43,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 21,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.715152
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.444444
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 21,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.866667
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.793103
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 43,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 9,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.488372
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.340909
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 9,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.230769
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.090909
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 20,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 1,
+            "thresh": -0.0956,
+            "left": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": -1.4765,
+              "left": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": -1.6688,
+                "left": {
+                  "leaf": true,
+                  "val": 0.235849
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.084507
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": -1.4261,
+                "left": {
+                  "leaf": true,
+                  "val": 0.4
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.21875
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 13,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": 0.1279,
+                "left": {
+                  "leaf": true,
+                  "val": 0.193548
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.339394
+                }
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.7
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 1,
+            "thresh": -0.0548,
+            "left": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": -0.6764,
+              "left": {
+                "leaf": false,
+                "feat": 5,
+                "thresh": 0.0448,
+                "left": {
+                  "leaf": true,
+                  "val": 0.923077
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.333333
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 13,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.178571
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.615385
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 5,
+              "thresh": -1.3443,
+              "left": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": 0.4337,
+                "left": {
+                  "leaf": true,
+                  "val": 0.818182
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 1.0
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 23,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.682927
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.543478
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 4,
+          "thresh": -0.2449,
+          "left": {
+            "leaf": false,
+            "feat": 4,
+            "thresh": -0.4437,
+            "left": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.4884,
+              "left": {
+                "leaf": false,
+                "feat": 11,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.157895
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.0
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.4713,
+                "left": {
+                  "leaf": true,
+                  "val": 0.254237
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.095238
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 9,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 11,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.35
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.196078
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.3434,
+                "left": {
+                  "leaf": true,
+                  "val": 0.329193
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.508772
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 4,
+            "thresh": -0.0085,
+            "left": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.1902,
+              "left": {
+                "leaf": false,
+                "feat": 9,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.176471
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.518519
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 33,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.59375
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.869565
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 24,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 44,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.94382
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.761905
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": 1.7363,
+                "left": {
+                  "leaf": true,
+                  "val": 0.634921
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.954545
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 1,
+            "thresh": 0.2759,
+            "left": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": -0.0956,
+              "left": {
+                "leaf": false,
+                "feat": 13,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.0
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.034483
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": -0.3702,
+                "left": {
+                  "leaf": true,
+                  "val": 0.5
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.018868
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 40,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 35,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.236842
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.438596
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": 0.976,
+                "left": {
+                  "leaf": true,
+                  "val": 0.163934
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.0
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 34,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 2,
+              "thresh": 0.0693,
+              "left": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": -0.0001,
+                "left": {
+                  "leaf": true,
+                  "val": 0.833333
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.142857
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": 1.1837,
+                "left": {
+                  "leaf": true,
+                  "val": 0.493671
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.888889
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 2,
+              "thresh": -0.7067,
+              "left": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": -1.7753,
+                "left": {
+                  "leaf": true,
+                  "val": 0.28125
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.629032
+                }
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.0
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 2,
+          "thresh": -0.8045,
+          "left": {
+            "leaf": false,
+            "feat": 5,
+            "thresh": -1.3443,
+            "left": {
+              "leaf": false,
+              "feat": 32,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": -1.0875,
+                "left": {
+                  "leaf": true,
+                  "val": 0.785714
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.422222
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 43,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 1.0
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.888889
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 2,
+              "thresh": -0.9945,
+              "left": {
+                "leaf": false,
+                "feat": 13,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.981481
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.8
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 7,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.894737
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.642857
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 29,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 5,
+              "thresh": 0.0448,
+              "left": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": -0.7368,
+                "left": {
+                  "leaf": true,
+                  "val": 0.133333
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.040404
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": -0.1296,
+                "left": {
+                  "leaf": true,
+                  "val": 0.581818
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.122995
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 43,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": 0.2816,
+                "left": {
+                  "leaf": true,
+                  "val": 0.491228
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.141667
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": 0.0723,
+                "left": {
+                  "leaf": true,
+                  "val": 0.883721
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.583333
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 4,
+            "thresh": -0.4485,
+            "left": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.461,
+              "left": {
+                "leaf": true,
+                "val": 0.0
+              },
+              "right": {
+                "leaf": false,
+                "feat": 29,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.0
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.2
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.3007,
+              "left": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": 1.3095,
+                "left": {
+                  "leaf": true,
+                  "val": 0.054422
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.24359
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 5,
+                "thresh": 0.7394,
+                "left": {
+                  "leaf": true,
+                  "val": 0.413043
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.043478
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 4,
+            "thresh": -0.1364,
+            "left": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.4789,
+              "left": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.5163,
+                "left": {
+                  "leaf": true,
+                  "val": 0.444444
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.08
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": -0.8306,
+                "left": {
+                  "leaf": true,
+                  "val": 0.367347
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.54321
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 5,
+              "thresh": 0.7394,
+              "left": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": 1.4491,
+                "left": {
+                  "leaf": true,
+                  "val": 0.748344
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.921875
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": 0.0171,
+                "left": {
+                  "leaf": true,
+                  "val": 0.142857
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.62069
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 4,
+          "thresh": -0.234,
+          "left": {
+            "leaf": false,
+            "feat": 4,
+            "thresh": -0.4289,
+            "left": {
+              "leaf": false,
+              "feat": 39,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": -0.7031,
+                "left": {
+                  "leaf": true,
+                  "val": 0.361702
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.125926
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": 1.8721,
+                "left": {
+                  "leaf": true,
+                  "val": 0.008197
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.272727
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 29,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 21,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.315217
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.09434
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.3242,
+                "left": {
+                  "leaf": true,
+                  "val": 0.316832
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.527273
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 39,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 17,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.0242,
+                "left": {
+                  "leaf": true,
+                  "val": 0.64
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.956522
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 21,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.761194
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.514286
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 21,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": -0.7479,
+                "left": {
+                  "leaf": true,
+                  "val": 0.0
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 1.0
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 9,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.0
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.333333
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 0,
+          "thresh": -0.024,
+          "left": {
+            "leaf": false,
+            "feat": 0,
+            "thresh": -0.8959,
+            "left": {
+              "leaf": false,
+              "feat": 14,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 0,
+                "thresh": -1.235,
+                "left": {
+                  "leaf": true,
+                  "val": 0.966667
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.827586
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 0,
+                "thresh": -1.0413,
+                "left": {
+                  "leaf": true,
+                  "val": 0.830508
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.538462
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 2,
+              "thresh": -0.5531,
+              "left": {
+                "leaf": false,
+                "feat": 0,
+                "thresh": -0.8475,
+                "left": {
+                  "leaf": true,
+                  "val": 0.666667
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.244186
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 0,
+                "thresh": -0.1694,
+                "left": {
+                  "leaf": true,
+                  "val": 0.620968
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.394737
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 2,
+            "thresh": 0.8225,
+            "left": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": 0.4119,
+              "left": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": -0.0551,
+                "left": {
+                  "leaf": true,
+                  "val": 0.0
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.25
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 14,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.04918
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.0
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": 1.0901,
+              "left": {
+                "leaf": false,
+                "feat": 44,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.337209
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.727273
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": 2.0647,
+                "left": {
+                  "leaf": true,
+                  "val": 0.068966
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.405405
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 2,
+          "thresh": -0.8089,
+          "left": {
+            "leaf": false,
+            "feat": 9,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 41,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": -0.9178,
+                "left": {
+                  "leaf": true,
+                  "val": 0.351351
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.217391
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": -1.0638,
+                "left": {
+                  "leaf": true,
+                  "val": 1.0
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.542373
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 2,
+              "thresh": -0.9945,
+              "left": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": -1.0265,
+                "left": {
+                  "leaf": true,
+                  "val": 0.892857
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.736842
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 45,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.742857
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.48
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 40,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 2,
+              "thresh": 0.28,
+              "left": {
+                "leaf": false,
+                "feat": 41,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.324074
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.512438
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 30,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.341667
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.164835
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 2,
+              "thresh": 2.2466,
+              "left": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": 0.1267,
+                "left": {
+                  "leaf": true,
+                  "val": 0.0
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.107527
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 2,
+                "thresh": 2.4899,
+                "left": {
+                  "leaf": true,
+                  "val": 0.705882
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.0
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 4,
+          "thresh": -0.3435,
+          "left": {
+            "leaf": false,
+            "feat": 4,
+            "thresh": -0.4216,
+            "left": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.4765,
+              "left": {
+                "leaf": false,
+                "feat": 0,
+                "thresh": 0.0728,
+                "left": {
+                  "leaf": true,
+                  "val": 0.105263
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.009709
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.4231,
+                "left": {
+                  "leaf": true,
+                  "val": 0.140541
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.416667
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 12,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.833333
+              },
+              "right": {
+                "leaf": false,
+                "feat": 7,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.204545
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.382716
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 4,
+            "thresh": -0.0026,
+            "left": {
+              "leaf": false,
+              "feat": 29,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": -0.0266,
+                "left": {
+                  "leaf": true,
+                  "val": 0.359551
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.857143
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 0,
+                "thresh": -0.1694,
+                "left": {
+                  "leaf": true,
+                  "val": 0.724771
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.375
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 24,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": 0.6803,
+                "left": {
+                  "leaf": true,
+                  "val": 0.833333
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.958333
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 4,
+                "thresh": 1.7205,
+                "left": {
+                  "leaf": true,
+                  "val": 0.567164
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.888889
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 0,
+          "thresh": -0.46,
+          "left": {
+            "leaf": false,
+            "feat": 39,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 23,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 32,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.540146
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.807018
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 0,
+                "thresh": -0.8475,
+                "left": {
+                  "leaf": true,
+                  "val": 0.907801
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.727273
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 45,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 23,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.0
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.2
+                }
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.5
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 0,
+            "thresh": -0.1694,
+            "left": {
+              "leaf": false,
+              "feat": 23,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 6,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.5
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.2
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 30,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.756757
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.111111
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": 1.5744,
+              "left": {
+                "leaf": false,
+                "feat": 30,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.240343
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.132353
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 21,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.042857
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.171429
+                }
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 18,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": 0.0956,
+              "left": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": -0.2541,
+                "left": {
+                  "leaf": true,
+                  "val": 0.0
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.036364
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": 0.4279,
+                "left": {
+                  "leaf": true,
+                  "val": 0.121951
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.0
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": 0.9914,
+              "left": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": 0.6779,
+                "left": {
+                  "leaf": true,
+                  "val": 0.203125
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.436364
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": 1.2645,
+                "left": {
+                  "leaf": true,
+                  "val": 0.2
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.022222
+                }
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 18,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 20,
+              "thresh": 0.0,
+              "left": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": -1.4722,
+                "left": {
+                  "leaf": true,
+                  "val": 0.373737
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.461538
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": -0.1425,
+                "left": {
+                  "leaf": true,
+                  "val": 0.696429
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.540984
+                }
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": 1.0683,
+              "left": {
+                "leaf": false,
+                "feat": 16,
+                "thresh": 0.0,
+                "left": {
+                  "leaf": true,
+                  "val": 0.874074
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.741935
+                }
+              },
+              "right": {
+                "leaf": false,
+                "feat": 1,
+                "thresh": 1.3818,
+                "left": {
+                  "leaf": true,
+                  "val": 0.813953
+                },
+                "right": {
+                  "leaf": true,
+                  "val": 0.5
+                }
+              }
+            }
+          }
+        }
+      ],
+      "hyperparameters": {
+        "n_estimators": 28,
+        "max_depth": 4,
+        "criterion": "squared_error_gini"
+      },
+      "metrics": {
+        "accuracy": 0.841,
+        "precision": 0.8471,
+        "recall": 0.7423,
+        "specificity": 0.9085,
+        "f1_score": 0.7912,
+        "roc_auc": 0.9175,
+        "threshold": 0.5,
+        "test_samples": 239,
+        "confusion_matrix": {
+          "tp": 72,
+          "tn": 129,
+          "fp": 13,
+          "fn": 25
+        },
+        "roc_curve": [
+          {
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.1031
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.2062
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.3093
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.4124
+          },
+          {
+            "fpr": 0.0211,
+            "tpr": 0.4845
+          },
+          {
+            "fpr": 0.0423,
+            "tpr": 0.5567
+          },
+          {
+            "fpr": 0.0563,
+            "tpr": 0.6392
+          },
+          {
+            "fpr": 0.0704,
+            "tpr": 0.7216
+          },
+          {
+            "fpr": 0.1056,
+            "tpr": 0.7732
+          },
+          {
+            "fpr": 0.1268,
+            "tpr": 0.8454
+          },
+          {
+            "fpr": 0.1831,
+            "tpr": 0.866
+          },
+          {
+            "fpr": 0.2394,
+            "tpr": 0.8866
+          },
+          {
+            "fpr": 0.2958,
+            "tpr": 0.9072
+          },
+          {
+            "fpr": 0.3592,
+            "tpr": 0.9175
+          },
+          {
+            "fpr": 0.4085,
+            "tpr": 0.9485
+          },
+          {
+            "fpr": 0.4648,
+            "tpr": 0.9691
+          },
+          {
+            "fpr": 0.5282,
+            "tpr": 0.9794
+          },
+          {
+            "fpr": 0.5986,
+            "tpr": 0.9794
+          },
+          {
+            "fpr": 0.662,
+            "tpr": 0.9897
+          },
+          {
+            "fpr": 0.7324,
+            "tpr": 0.9897
+          },
+          {
+            "fpr": 0.8028,
+            "tpr": 0.9897
+          },
+          {
+            "fpr": 0.8662,
+            "tpr": 1.0
+          },
+          {
+            "fpr": 0.9366,
+            "tpr": 1.0
+          },
+          {
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ]
+      },
+      "feature_importance": [
+        {
+          "feature_key": "charge_to_tenure_ratio",
+          "feature_name": "Monthly Spend-to-Tenure Ratio",
+          "parent_feature": "charge_to_tenure_ratio",
+          "importance": 0.2355,
+          "coefficient": 0.3685,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "Contract_Month-to-month",
+          "feature_name": "Contract: Month-to-month",
+          "parent_feature": "Contract",
+          "importance": 0.2337,
+          "coefficient": 0.6892,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "tenure",
+          "feature_name": "Customer Tenure (Months)",
+          "parent_feature": "tenure",
+          "importance": 0.0965,
+          "coefficient": -0.5416,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "TotalCharges",
+          "feature_name": "Total Cumulative Charges ($)",
+          "parent_feature": "TotalCharges",
+          "importance": 0.0737,
+          "coefficient": -0.1643,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "InternetService_Fiber optic",
+          "feature_name": "Internet Service: Fiber optic",
+          "parent_feature": "InternetService",
+          "importance": 0.0402,
+          "coefficient": 0.3038,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "Contract_One year",
+          "feature_name": "Contract: One year",
+          "parent_feature": "Contract",
+          "importance": 0.0334,
+          "coefficient": -0.3656,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "OnlineSecurity_No",
+          "feature_name": "Online Security: Disabled",
+          "parent_feature": "OnlineSecurity",
+          "importance": 0.0331,
+          "coefficient": 0.237,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "MonthlyCharges",
+          "feature_name": "Monthly Charges ($)",
+          "parent_feature": "MonthlyCharges",
+          "importance": 0.0255,
+          "coefficient": 0.3308,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "active_addon_count",
+          "feature_name": "Active Protection & Support Add-ons",
+          "parent_feature": "active_addon_count",
+          "importance": 0.0241,
+          "coefficient": -0.1465,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "InternetService_No",
+          "feature_name": "Internet Service: No Internet",
+          "parent_feature": "InternetService",
+          "importance": 0.0179,
+          "coefficient": -0.0853,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "TechSupport_No",
+          "feature_name": "Tech Support: Disabled",
+          "parent_feature": "TechSupport",
+          "importance": 0.0179,
+          "coefficient": 0.2017,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "PaymentMethod_Electronic check",
+          "feature_name": "Payment Method: Electronic check",
+          "parent_feature": "PaymentMethod",
+          "importance": 0.0135,
+          "coefficient": 0.2014,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "TechSupport_No internet service",
+          "feature_name": "TechSupport No internet service",
+          "parent_feature": "TechSupport",
+          "importance": 0.0129,
+          "coefficient": -0.0853,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "Contract_Two year",
+          "feature_name": "Contract: Two year",
+          "parent_feature": "Contract",
+          "importance": 0.0111,
+          "coefficient": -0.3765,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "InternetService_DSL",
+          "feature_name": "Internet Service: DSL",
+          "parent_feature": "InternetService",
+          "importance": 0.0106,
+          "coefficient": -0.2714,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "TechSupport_Yes",
+          "feature_name": "Tech Support: Enabled",
+          "parent_feature": "TechSupport",
+          "importance": 0.0102,
+          "coefficient": -0.1693,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "Partner_Yes",
+          "feature_name": "Partner: Has Partner",
+          "parent_feature": "Partner",
+          "importance": 0.0086,
+          "coefficient": -0.1981,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "OnlineBackup_No internet service",
+          "feature_name": "OnlineBackup No internet service",
+          "parent_feature": "OnlineBackup",
+          "importance": 0.008,
+          "coefficient": -0.0853,
+          "direction": "reduces_churn"
+        }
+      ]
+    },
+    "gradient_boosting": {
+      "name": "Gradient Boosted Trees (32 Stages)",
+      "type": "gradient_boosting",
+      "init_log_odds": -0.376929,
+      "learning_rate": 0.14,
+      "trees": [
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 29,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 5,
+              "thresh": 0.0448,
+              "left": {
+                "leaf": true,
+                "val": -0.406868
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.31659
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 21,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.11275
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.317316
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 20,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": -0.8475,
+              "left": {
+                "leaf": true,
+                "val": 0.266816
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.052029
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": 1.1869,
+              "left": {
+                "leaf": true,
+                "val": 0.399999
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.184646
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 4,
+          "thresh": -0.3317,
+          "left": {
+            "leaf": false,
+            "feat": 4,
+            "thresh": -0.4384,
+            "left": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": -0.024,
+              "left": {
+                "leaf": true,
+                "val": -0.133576
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.302009
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 40,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.065517
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.250933
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 4,
+            "thresh": -0.1278,
+            "left": {
+              "leaf": false,
+              "feat": 20,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.063235
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.210736
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 18,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.217179
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.426854
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 4,
+          "thresh": -0.2422,
+          "left": {
+            "leaf": false,
+            "feat": 4,
+            "thresh": -0.4422,
+            "left": {
+              "leaf": false,
+              "feat": 2,
+              "thresh": -0.8107,
+              "left": {
+                "leaf": true,
+                "val": -0.07408
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.278118
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 8,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.012741
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.15667
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 39,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 43,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.23209
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.392693
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 21,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.086982
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.386228
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 18,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 33,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.29991
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.241394
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 43,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.174674
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.008861
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 18,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.2422,
+              "left": {
+                "leaf": true,
+                "val": -0.033513
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.177269
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 30,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.365346
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.19541
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 1,
+            "thresh": 0.2479,
+            "left": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": 0.1213,
+              "left": {
+                "leaf": true,
+                "val": -0.290172
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.254371
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": 0.976,
+              "left": {
+                "leaf": true,
+                "val": -0.05685
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.242139
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 4,
+            "thresh": -0.127,
+            "left": {
+              "leaf": false,
+              "feat": 29,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.027343
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.162824
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 23,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.145611
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.332713
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 9,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 2,
+              "thresh": 1.3095,
+              "left": {
+                "leaf": true,
+                "val": -0.233546
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.131652
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.4258,
+              "left": {
+                "leaf": true,
+                "val": -0.185798
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.029212
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 20,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": 0.048,
+              "left": {
+                "leaf": true,
+                "val": -0.03511
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.231993
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 6,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.144764
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.268165
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 20,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 24,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.204765
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.12387
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": -0.1694,
+              "left": {
+                "leaf": true,
+                "val": 0.096839
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.14175
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 37,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 43,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.098816
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.257234
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 42,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.177496
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.085025
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 0,
+          "thresh": -0.024,
+          "left": {
+            "leaf": false,
+            "feat": 0,
+            "thresh": -1.1866,
+            "left": {
+              "leaf": false,
+              "feat": 9,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.122215
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.31533
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 23,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.039768
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.099755
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 2,
+            "thresh": 0.1905,
+            "left": {
+              "leaf": false,
+              "feat": 3,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.226499
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.054636
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 17,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.014783
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.155813
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 4,
+          "thresh": -0.2384,
+          "left": {
+            "leaf": false,
+            "feat": 18,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 2,
+              "thresh": -0.7091,
+              "left": {
+                "leaf": true,
+                "val": -0.057729
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.1487
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 40,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.068221
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.124335
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 0,
+            "thresh": -0.3147,
+            "left": {
+              "leaf": false,
+              "feat": 18,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.068176
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.221414
+              }
+            },
+            "right": {
+              "leaf": true,
+              "val": -0.313247
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 4,
+          "thresh": -0.2393,
+          "left": {
+            "leaf": false,
+            "feat": 18,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 7,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.093543
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.169319
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 40,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.084332
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.09775
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 5,
+            "thresh": 0.7394,
+            "left": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": 0.2421,
+              "left": {
+                "leaf": true,
+                "val": 0.110337
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.225278
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": 0.3422,
+              "left": {
+                "leaf": true,
+                "val": -0.170983
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.026251
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 1,
+            "thresh": 0.2867,
+            "left": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": -0.4541,
+              "left": {
+                "leaf": true,
+                "val": -0.18153
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.131929
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": 1.3206,
+              "left": {
+                "leaf": true,
+                "val": -0.033531
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.230532
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 18,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 2,
+              "thresh": -1.0381,
+              "left": {
+                "leaf": true,
+                "val": 0.167565
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.010519
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 30,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.207311
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.074758
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 0,
+          "thresh": -0.8959,
+          "left": {
+            "leaf": false,
+            "feat": 39,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 23,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.024543
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.169634
+              }
+            },
+            "right": {
+              "leaf": true,
+              "val": -0.172719
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 1,
+            "thresh": 0.2867,
+            "left": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": -0.8475,
+              "left": {
+                "leaf": true,
+                "val": 0.069832
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.130609
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 29,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.092446
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.0815
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 0,
+          "thresh": -0.024,
+          "left": {
+            "leaf": false,
+            "feat": 18,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 39,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.010703
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.16802
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 2,
+              "thresh": 0.0994,
+              "left": {
+                "leaf": true,
+                "val": 0.170476
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.079436
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 24,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": 1.7198,
+              "left": {
+                "leaf": true,
+                "val": -0.088885
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.207159
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 18,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.096924
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.07412
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 0,
+          "thresh": -0.024,
+          "left": {
+            "leaf": false,
+            "feat": 20,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": -1.1866,
+              "left": {
+                "leaf": true,
+                "val": 0.12015
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.059409
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 8,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.163491
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.053268
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 18,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 7,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.079142
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.158743
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 43,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.061676
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.094193
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 8,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": -0.1209,
+              "left": {
+                "leaf": true,
+                "val": 0.129881
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.088772
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 43,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.165569
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.077367
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 18,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 7,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.081565
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.065561
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 29,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.017317
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.15453
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 40,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 39,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 20,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.01408
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.101993
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 29,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.110584
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.005217
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 11,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 18,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.15199
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.224005
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 43,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.11562
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.024511
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 18,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 36,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.124275
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.066985
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": 0.1512,
+              "left": {
+                "leaf": true,
+                "val": -0.039961
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.313281
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 29,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.0209,
+              "left": {
+                "leaf": true,
+                "val": -0.027812
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.090774
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 18,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.027641
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.148942
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 20,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 32,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.128223
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.049655
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.3174,
+              "left": {
+                "leaf": true,
+                "val": -0.045423
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.151231
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 0,
+            "thresh": 0.7025,
+            "left": {
+              "leaf": false,
+              "feat": 18,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.003333
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.07687
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": 1.4776,
+              "left": {
+                "leaf": true,
+                "val": 0.320982
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.032222
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 4,
+          "thresh": -0.2156,
+          "left": {
+            "leaf": false,
+            "feat": 1,
+            "thresh": 0.3929,
+            "left": {
+              "leaf": false,
+              "feat": 46,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.089061
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.014024
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": 0.9745,
+              "left": {
+                "leaf": true,
+                "val": 0.058925
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.093242
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 43,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 24,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.053186
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.099142
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": -0.6537,
+              "left": {
+                "leaf": true,
+                "val": 0.144654
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.024454
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 18,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 0,
+            "thresh": -0.1694,
+            "left": {
+              "leaf": false,
+              "feat": 6,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.067411
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.048094
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 36,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.123963
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.031396
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 0,
+            "thresh": -0.1694,
+            "left": {
+              "leaf": false,
+              "feat": 29,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.030126
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.146723
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 45,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.026814
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.093353
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 4,
+          "thresh": -0.234,
+          "left": {
+            "leaf": false,
+            "feat": 1,
+            "thresh": 0.4271,
+            "left": {
+              "leaf": false,
+              "feat": 9,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.084933
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.020566
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": 1.0618,
+              "left": {
+                "leaf": true,
+                "val": 0.050563
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.099525
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 0,
+            "thresh": -0.3147,
+            "left": {
+              "leaf": false,
+              "feat": 5,
+              "thresh": 0.7394,
+              "left": {
+                "leaf": true,
+                "val": 0.084615
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.082271
+              }
+            },
+            "right": {
+              "leaf": true,
+              "val": -0.403239
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 4,
+          "thresh": -0.0042,
+          "left": {
+            "leaf": false,
+            "feat": 0,
+            "thresh": -1.235,
+            "left": {
+              "leaf": true,
+              "val": -0.438338
+            },
+            "right": {
+              "leaf": false,
+              "feat": 40,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.001852
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.07708
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 24,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 14,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.154997
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.055727
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": 0.4406,
+              "left": {
+                "leaf": true,
+                "val": -0.114085
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.075355
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 18,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 29,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.112011
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.073613
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 8,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.032356
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.095402
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 7,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 20,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.01359
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.119072
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 29,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.052461
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.060262
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 1,
+            "thresh": 0.5714,
+            "left": {
+              "leaf": false,
+              "feat": 24,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.097283
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.037864
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": 1.3972,
+              "left": {
+                "leaf": true,
+                "val": 0.022449
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.186393
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 18,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 24,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.024527
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.082845
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 2,
+              "thresh": 0.7375,
+              "left": {
+                "leaf": true,
+                "val": 0.048747
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.177747
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 1,
+            "thresh": 0.2948,
+            "left": {
+              "leaf": false,
+              "feat": 36,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.092642
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.035186
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 9,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.061355
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.057929
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 9,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 18,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.029854
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.063098
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 20,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.008516
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.113963
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 40,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.4192,
+              "left": {
+                "leaf": true,
+                "val": -0.088141
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.002066
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.4341,
+              "left": {
+                "leaf": true,
+                "val": -0.056729
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.135549
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 2,
+            "thresh": -0.7668,
+            "left": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": -0.3147,
+              "left": {
+                "leaf": true,
+                "val": 0.039282
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.451527
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 44,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.011241
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.149057
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 20,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 17,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 42,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.025945
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.072948
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 46,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.041111
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.223833
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 0,
+            "thresh": 1.2838,
+            "left": {
+              "leaf": false,
+              "feat": 30,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.075389
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.012679
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 46,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.057822
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.23273
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 1,
+            "thresh": 0.2479,
+            "left": {
+              "leaf": false,
+              "feat": 4,
+              "thresh": -0.3854,
+              "left": {
+                "leaf": true,
+                "val": -0.063485
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.141922
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": 1.3533,
+              "left": {
+                "leaf": true,
+                "val": 0.007801
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.127404
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 6,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 18,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.055909
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.064314
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 21,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.097934
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.033416
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 1,
+            "thresh": -0.0479,
+            "left": {
+              "leaf": false,
+              "feat": 26,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.070735
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.115282
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 9,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.055387
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.03436
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 44,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 24,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.064513
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.006624
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 9,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.100772
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.036482
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 29,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 1,
+            "thresh": 1.0891,
+            "left": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": 0.8464,
+              "left": {
+                "leaf": true,
+                "val": -0.036263
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.121217
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 3,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": -0.089735
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.401152
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 20,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 46,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.020221
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.17412
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": -0.1694,
+              "left": {
+                "leaf": true,
+                "val": 0.111344
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.013331
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 38,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 1,
+            "thresh": -0.0064,
+            "left": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": -0.1694,
+              "left": {
+                "leaf": true,
+                "val": -0.142796
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.057522
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 1,
+              "thresh": 1.021,
+              "left": {
+                "leaf": true,
+                "val": 0.008584
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.093447
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 6,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 17,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.028061
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.078638
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": -1.0413,
+              "left": {
+                "leaf": true,
+                "val": 0.122618
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.03912
+              }
+            }
+          }
+        },
+        {
+          "leaf": false,
+          "feat": 18,
+          "thresh": 0.0,
+          "left": {
+            "leaf": false,
+            "feat": 42,
+            "thresh": 0.0,
+            "left": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": -0.1694,
+              "left": {
+                "leaf": true,
+                "val": 0.036686
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.058495
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": -0.9928,
+              "left": {
+                "leaf": true,
+                "val": -0.195075
+              },
+              "right": {
+                "leaf": true,
+                "val": -0.048067
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feat": 0,
+            "thresh": -0.1694,
+            "left": {
+              "leaf": false,
+              "feat": 26,
+              "thresh": 0.0,
+              "left": {
+                "leaf": true,
+                "val": 0.007269
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.081596
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feat": 0,
+              "thresh": 0.5572,
+              "left": {
+                "leaf": true,
+                "val": -0.090912
+              },
+              "right": {
+                "leaf": true,
+                "val": 0.013545
+              }
+            }
+          }
+        }
+      ],
+      "hyperparameters": {
+        "n_estimators": 32,
+        "learning_rate": 0.14,
+        "max_depth": 3
+      },
+      "metrics": {
+        "accuracy": 0.8536,
+        "precision": 0.8229,
+        "recall": 0.8144,
+        "specificity": 0.8803,
+        "f1_score": 0.8187,
+        "roc_auc": 0.9214,
+        "threshold": 0.5,
+        "test_samples": 239,
+        "confusion_matrix": {
+          "tp": 79,
+          "tn": 125,
+          "fp": 17,
+          "fn": 18
+        },
+        "roc_curve": [
+          {
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.1031
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.2062
+          },
+          {
+            "fpr": 0.007,
+            "tpr": 0.299
+          },
+          {
+            "fpr": 0.007,
+            "tpr": 0.4021
+          },
+          {
+            "fpr": 0.0282,
+            "tpr": 0.4742
+          },
+          {
+            "fpr": 0.0352,
+            "tpr": 0.567
+          },
+          {
+            "fpr": 0.0352,
+            "tpr": 0.6701
+          },
+          {
+            "fpr": 0.0704,
+            "tpr": 0.7216
+          },
+          {
+            "fpr": 0.0986,
+            "tpr": 0.7835
+          },
+          {
+            "fpr": 0.1268,
+            "tpr": 0.8454
+          },
+          {
+            "fpr": 0.1901,
+            "tpr": 0.8557
+          },
+          {
+            "fpr": 0.2465,
+            "tpr": 0.8763
+          },
+          {
+            "fpr": 0.2817,
+            "tpr": 0.9278
+          },
+          {
+            "fpr": 0.3451,
+            "tpr": 0.9381
+          },
+          {
+            "fpr": 0.4155,
+            "tpr": 0.9381
+          },
+          {
+            "fpr": 0.4859,
+            "tpr": 0.9381
+          },
+          {
+            "fpr": 0.5282,
+            "tpr": 0.9794
+          },
+          {
+            "fpr": 0.5845,
+            "tpr": 1.0
+          },
+          {
+            "fpr": 0.6549,
+            "tpr": 1.0
+          },
+          {
+            "fpr": 0.7254,
+            "tpr": 1.0
+          },
+          {
+            "fpr": 0.7958,
+            "tpr": 1.0
+          },
+          {
+            "fpr": 0.8662,
+            "tpr": 1.0
+          },
+          {
+            "fpr": 0.9366,
+            "tpr": 1.0
+          },
+          {
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ]
+      },
+      "feature_importance": [
+        {
+          "feature_key": "Contract_Month-to-month",
+          "feature_name": "Contract: Month-to-month",
+          "parent_feature": "Contract",
+          "importance": 0.367,
+          "coefficient": 0.6892,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "charge_to_tenure_ratio",
+          "feature_name": "Monthly Spend-to-Tenure Ratio",
+          "parent_feature": "charge_to_tenure_ratio",
+          "importance": 0.2293,
+          "coefficient": 0.3685,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "tenure",
+          "feature_name": "Customer Tenure (Months)",
+          "parent_feature": "tenure",
+          "importance": 0.0867,
+          "coefficient": -0.5416,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "InternetService_Fiber optic",
+          "feature_name": "Internet Service: Fiber optic",
+          "parent_feature": "InternetService",
+          "importance": 0.0635,
+          "coefficient": 0.3038,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "OnlineSecurity_No",
+          "feature_name": "Online Security: Disabled",
+          "parent_feature": "OnlineSecurity",
+          "importance": 0.0423,
+          "coefficient": 0.237,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "MonthlyCharges",
+          "feature_name": "Monthly Charges ($)",
+          "parent_feature": "MonthlyCharges",
+          "importance": 0.0356,
+          "coefficient": 0.3308,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "TechSupport_No",
+          "feature_name": "Tech Support: Disabled",
+          "parent_feature": "TechSupport",
+          "importance": 0.0214,
+          "coefficient": 0.2017,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "Contract_One year",
+          "feature_name": "Contract: One year",
+          "parent_feature": "Contract",
+          "importance": 0.0196,
+          "coefficient": -0.3656,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "Contract_Two year",
+          "feature_name": "Contract: Two year",
+          "parent_feature": "Contract",
+          "importance": 0.0156,
+          "coefficient": -0.3765,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "PaymentMethod_Electronic check",
+          "feature_name": "Payment Method: Electronic check",
+          "parent_feature": "PaymentMethod",
+          "importance": 0.0135,
+          "coefficient": 0.2014,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "TotalCharges",
+          "feature_name": "Total Cumulative Charges ($)",
+          "parent_feature": "TotalCharges",
+          "importance": 0.0128,
+          "coefficient": -0.1643,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "OnlineBackup_No",
+          "feature_name": "Online Backup: Disabled",
+          "parent_feature": "OnlineBackup",
+          "importance": 0.0096,
+          "coefficient": 0.0297,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "Partner_No",
+          "feature_name": "Partner: Single",
+          "parent_feature": "Partner",
+          "importance": 0.0081,
+          "coefficient": 0.1452,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "OnlineSecurity_Yes",
+          "feature_name": "Online Security: Enabled",
+          "parent_feature": "OnlineSecurity",
+          "importance": 0.0081,
+          "coefficient": -0.2046,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "Partner_Yes",
+          "feature_name": "Partner: Has Partner",
+          "parent_feature": "Partner",
+          "importance": 0.0078,
+          "coefficient": -0.1981,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "active_addon_count",
+          "feature_name": "Active Protection & Support Add-ons",
+          "parent_feature": "active_addon_count",
+          "importance": 0.0077,
+          "coefficient": -0.1465,
+          "direction": "reduces_churn"
+        },
+        {
+          "feature_key": "OnlineBackup_Yes",
+          "feature_name": "Online Backup: Enabled",
+          "parent_feature": "OnlineBackup",
+          "importance": 0.007,
+          "coefficient": 0.0027,
+          "direction": "increases_churn"
+        },
+        {
+          "feature_key": "gender_Female",
+          "feature_name": "gender Female",
+          "parent_feature": "gender",
+          "importance": 0.0056,
+          "coefficient": 0.0317,
+          "direction": "increases_churn"
+        }
+      ]
+    }
+  },
+  "human_feature_labels": {
+    "tenure": "Customer Tenure (Months)",
+    "MonthlyCharges": "Monthly Charges ($)",
+    "TotalCharges": "Total Cumulative Charges ($)",
+    "SeniorCitizen": "Senior Citizen Status",
+    "charge_to_tenure_ratio": "Monthly Spend-to-Tenure Ratio",
+    "active_addon_count": "Active Protection & Support Add-ons",
+    "Contract_Month-to-month": "Contract: Month-to-month",
+    "Contract_One year": "Contract: One year",
+    "Contract_Two year": "Contract: Two year",
+    "InternetService_Fiber optic": "Internet Service: Fiber optic",
+    "InternetService_DSL": "Internet Service: DSL",
+    "InternetService_No": "Internet Service: No Internet",
+    "OnlineSecurity_No": "Online Security: Disabled",
+    "OnlineSecurity_Yes": "Online Security: Enabled",
+    "TechSupport_No": "Tech Support: Disabled",
+    "TechSupport_Yes": "Tech Support: Enabled",
+    "PaymentMethod_Electronic check": "Payment Method: Electronic check",
+    "PaymentMethod_Mailed check": "Payment Method: Mailed check",
+    "PaymentMethod_Bank transfer (automatic)": "Payment Method: Bank transfer (auto)",
+    "PaymentMethod_Credit card (automatic)": "Payment Method: Credit card (auto)",
+    "PaperlessBilling_Yes": "Paperless Billing: Enabled",
+    "PaperlessBilling_No": "Paperless Billing: Disabled",
+    "OnlineBackup_No": "Online Backup: Disabled",
+    "OnlineBackup_Yes": "Online Backup: Enabled",
+    "DeviceProtection_No": "Device Protection: Disabled",
+    "DeviceProtection_Yes": "Device Protection: Enabled",
+    "Dependents_No": "Dependents: None",
+    "Dependents_Yes": "Dependents: Has Dependents",
+    "Partner_No": "Partner: Single",
+    "Partner_Yes": "Partner: Has Partner",
+    "StreamingTV_Yes": "Streaming TV: Enabled",
+    "StreamingMovies_Yes": "Streaming Movies: Enabled",
+    "MultipleLines_Yes": "Multiple Phone Lines: Yes"
+  }
+}
